@@ -1,4 +1,57 @@
-# 🎯 PROJEKT UKŁADANIE KLOCKÓW - QUICK START
+# 🎯 Knapsack Problem / Problem Plecakowy 2D
+
+[![Java](https://img.shields.io/badge/Java-11%2B-orange.svg)](https://www.oracle.com/java/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![NetBeans](https://img.shields.io/badge/IDE-NetBeans-blue.svg)](https://netbeans.apache.org/)
+
+## 📖 About the Project / O Projekcie
+
+### 🇬🇧 English
+
+**2D Bin Packing Optimization Solver** - An educational project implementing six different algorithms for arranging rectangular blocks on a sheet to minimize waste (unused space).
+
+**Key Features:**
+- 🧮 **7 Optimization Algorithms**: Basic greedy, Brute Force, Greedy with Rotation, Best-Fit, and 3 sorting strategies
+- 📊 **Performance Comparison**: Compare all algorithms on the same dataset with ranking system
+- 🖥️ **GUI with Visualization**: Interactive interface for testing and visualizing results
+- 🗄️ **SQL Server Integration**: Store and analyze results in database
+- 🧪 **Testing Tools**: Console-based algorithm tester and database tester
+- 📈 **Detailed Metrics**: Execution time (µs), efficiency, waste area, skipped blocks
+
+**Technologies:** Java, Swing, SQL Server, JDBC
+
+**Educational Project** for Warsaw School of Computer Science (WWSI) - Advanced IDE and AI-Assisted Development course.
+
+---
+
+### 🇵🇱 Polski
+
+**Solver optymalizacji układania elementów 2D** - Projekt edukacyjny implementujący sześć różnych algorytmów układania prostokątnych klocków na tafli w celu minimalizacji odpadu (niewykorzystanej przestrzeni).
+
+**Główne funkcje:**
+- 🧮 **7 Algorytmów Optymalizacji**: Podstawowy zachłanny, Brute Force, Zachłanny z obracaniem, Best-Fit oraz 3 strategie sortowania
+- 📊 **Porównanie Wydajności**: Porównaj wszystkie algorytmy na tych samych danych z systemem rankingowym
+- 🖥️ **GUI z Wizualizacją**: Interaktywny interfejs do testowania i wizualizacji wyników
+- 🗄️ **Integracja z SQL Server**: Zapisywanie i analiza wyników w bazie danych
+- 🧪 **Narzędzia Testowe**: Konsolowe testery algorytmów i bazy danych
+- 📈 **Szczegółowe Metryki**: Czas wykonania (µs), efektywność, odpad, pominięte klocki
+
+**Technologie:** Java, Swing, SQL Server, JDBC
+
+**Projekt edukacyjny** dla Warszawskiej Wyższej Szkoły Informatyki (WWSI) - przedmiot Tworzenie aplikacji z wykorzystaniem IDE oraz wsparciem AI (TAZW).
+
+---
+
+## 📚 Documentation / Dokumentacja
+
+- 📖 **[INDEX.md](INDEX.md)** - Complete project overview / Pełny spis treści projektu
+- 📝 **[SPRAWOZDANIE.md](SPRAWOZDANIE.md)** - Technical report with results / Sprawozdanie techniczne z wynikami  
+- ❓ **[FAQ.md](FAQ.md)** - Frequently asked questions / Najczęściej zadawane pytania
+- 🔐 **[SECURITY.md](SECURITY.md)** - Security guidelines / Zasady bezpieczeństwa
+
+---
+
+## 🎯 QUICK START / SZYBKI START
 
 ## 🚀 Szybki Start
 
@@ -46,6 +99,7 @@
 
 | # | Algorytm | Opis | Ograniczenia |
 |---|----------|------|--------------|
+| 0 | **Podstawowy** | Prosty zachłanny bez optymalizacji | Wersja bazowa |
 | 1 | **Brute Force** | Wszystkie permutacje | ⚠️ Max 10 klocków |
 | 2 | **Zachłanny z obracaniem** | Testuje 0° i 90° | - |
 | 3 | **Sort. powierzchnia** | Największe pierwsze | - |
@@ -178,6 +232,8 @@ ORDER BY avg_waste ASC;
 ---
 
 ## 🐛 Rozwiązywanie Problemów
+
+💡 **Więcej rozwiązań problemów:** Zobacz [FAQ.md](FAQ.md) - szczegółowe odpowiedzi na najczęstsze pytania!
 
 ### ❌ "Brak sterownika JDBC"
 **Rozwiązanie:** Zobacz `lib/README_JDBC.md` i dodaj plik .jar do bibliotek

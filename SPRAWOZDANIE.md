@@ -11,7 +11,7 @@ Projekt implementuje różne algorytmy układania prostokątnych elementów (klo
 **Redukcja odpadu** - czyli ilości niewykorzystanej przestrzeni między rozmieszczonymi elementami.
 
 ### Definicja odpadu:
-Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
+Odpad = Powierzchnia tafli - Suma powierzchni klocków
 
 **Uwaga:** Przestrzeń poza ostatnim elementem po X i po Y nie jest wliczana do odpadu.
 
@@ -19,7 +19,7 @@ Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
 
 ## 🔧 ZAIMPLEMENTOWANE ALGORYTMY
 
-### 1. **Brute Force** (siła brut)
+### 1. **Brute Force**
 - **Opis:** Sprawdza wszystkie możliwe permutacje układania klocków
 - **Ograniczenie:** Działa tylko dla max 10 elementów (10! = 3,628,800 permutacji)
 - **Złożoność:** O(n! × n) - bardzo wolny dla dużych zbiorów
@@ -121,7 +121,7 @@ Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
 | Best-Fit | 151 µs | 120 802 | 57,64% | 4 |
 | Zachłanny z obracaniem | 9 µs | 120 802 | 57,64% | 4 |
 
-**Obserwacja:** 🎯 **Brute Force wygrywa!** Różnica efektywności: 88,50% vs 78,80% (+9,7 pp). Brute Force umieścił 9 klocków, podczas gdy Sort. wysokość tylko 8.
+**Obserwacja:** 🎯 **Brute Force wygrywa!** Różnica efektywności: 88,50% vs 78,80% (+9,7 pp). Brute Force umieścił 9 klocków, podczas gdy Sortowanenie po wysokości tylko 8.
 
 ---
 
@@ -137,7 +137,7 @@ Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
 | Sort. powierzchnia | 480 µs | 70 980 | 68,12% | 4 |
 | Zachłanny z obracaniem | 11 µs | 82 950 | 62,74% | 4 |
 
-**Obserwacja:** Sort. wysokość i Brute Force dają **identyczny wynik**, ale Sort. wysokość jest ~7400x szybszy!
+**Obserwacja:** Sortowanenie po wysokości i Brute Force dają **identyczny wynik**, ale Sortowanenie po wysokości jest ~7400x szybszy!
 
 ---
 
@@ -153,7 +153,7 @@ Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
 | Sort. szerokość | 9 µs | 89 574 | 55,86% | 6 |
 | Zachłanny z obracaniem | 7 µs | 98 418 | 51,50% | 6 |
 
-**Obserwacja:** Sort. wysokość minimalnie lepszy od Brute Force (81,01% vs 80,64%), choć Brute Force zmieścił więcej klocków (7 vs 6). **Efektywność ważniejsza niż liczba klocków!**
+**Obserwacja:** Sortowanenie po wysokości minimalnie lepszy od Brute Force (81,01% vs 80,64%), choć Brute Force zmieścił więcej klocków (7 vs 6). **Efektywność ważniejsza niż liczba klocków!**
 
 ---
 
@@ -198,7 +198,7 @@ Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
 | Zachłanny z obracaniem | 12 µs | 312 456 | 72,52% |
 | Sort. szerokość | 28 µs | 334 567 | 70,57% |
 
-**Obserwacja:** Przy 20 klockach zaczynają być widoczne różnice między algorytmami. Sort. wysokość prowadzi z 78,42% efektywności.
+**Obserwacja:** Przy 20 klockach zaczynają być widoczne różnice między algorytmami. Sortowanenie po wysokości prowadzi z 78,42% efektywności.
 
 **Uwaga:** Brute Force nie testowany - złożoność O(20!) = 2.4×10¹⁸ permutacji jest nieobliczalna.
 
@@ -215,7 +215,7 @@ Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
 | Zachłanny z obracaniem | 15 µs | 289 012 | 74,48% |
 | Sort. szerokość | 41 µs | 312 345 | 72,42% |
 
-**Obserwacja:** Różnice między algorytmami rosną. Sort. wysokość utrzymuje przewagę (83,28%). Best-Fit zbliża się do lidera.
+**Obserwacja:** Różnice między algorytmami rosną. Sortowanenie po wysokości utrzymuje przewagę (83,28%). Best-Fit zbliża się do lidera.
 
 ---
 
@@ -230,7 +230,7 @@ Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
 | Zachłanny z obracaniem | 18 µs | 234 567 | 74,97% |
 | Sort. szerokość | 77 µs | 278 901 | 69,62% |
 
-**Obserwacja:** 🎯 **Sort. wysokość wygrywa zdecydowanie!** Efektywność 86,45% przy czasie zaledwie 47 µs. Best-Fit jest drugi (82,53%), ale ~23x wolniejszy.
+**Obserwacja:** 🎯 **Sortowanenie po wysokości wygrywa zdecydowanie!** Efektywność 86,45% przy czasie zaledwie 47 µs. Best-Fit jest drugi (82,53%), ale ~23x wolniejszy.
 
 ---
 
@@ -261,7 +261,7 @@ Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
 | Zachłanny z obracaniem | 72,52% | 74,48% | 74,97% | ↗️ Wolny wzrost |
 | Sort. szerokość | 70,57% | 72,42% | 69,62% | ↔️ Niestabilny |
 
-**Wniosek:** Efektywność rośnie wraz z liczbą klocków (lepsze wypełnienie tafli). Sort. wysokość konsekwentnie prowadzi.
+**Wniosek:** Efektywność rośnie wraz z liczbą klocków (lepsze wypełnienie tafli). Sortowanenie po wysokości konsekwentnie prowadzi.
 
 ### Ranking algorytmów (według efektywności przy 40 klockach):
 
@@ -294,7 +294,7 @@ Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
 
 **Seria A (10 klocków, różne tafle):**
 - **Duża tafla:** Brute Force daje identyczny wynik jak inne algorytmy, ale jest ~187 000x wolniejszy
-- **Mała tafla:** Brute Force często wygrywa (83-88% vs 70-80% innych) lub dorównuje Sort. wysokość
+- **Mała tafla:** Brute Force często wygrywa (83-88% vs 70-80% innych) lub dorównuje Sortowaneniu po wysokości
 
 **Seria B (20-40 klocków):**
 - Brute Force nie testowany - złożoność O(n!) sprawia, że jest nieobliczalny:
@@ -313,7 +313,7 @@ Odpad = Powierzchnia prostokąta ograniczającego - Suma powierzchni klocków
 | Bardzo ciasna tafla (~194K px²) | **Best-Fit** | 82,51% |
 | Duża tafla, 20-40 klocków | **Sort. wysokość** | 78-86% |
 
-Przy dużej liczbie klocków **Sort. wysokość** jest bezkonkurencyjny:
+Przy dużej liczbie klocków **Sortowanenie po wysokości** jest bezkonkurencyjny:
 
 | Liczba klocków | Sort. wysokość | Drugie miejsce | Różnica |
 |----------------|----------------|----------------|---------|
@@ -322,7 +322,7 @@ Przy dużej liczbie klocków **Sort. wysokość** jest bezkonkurencyjny:
 | 40 | **86,45%** | Best-Fit (82,53%) | +3,92 pp |
 
 ### 3. Który algorytm jest najszybszy?
-**Algorytm Podstawowy** (<1-9 µs), ale z gorszą efektywnością. **Sort. wysokość** (5-47 µs) oferuje najlepszy kompromis - tylko 5x wolniejszy, ale znacznie lepszy jakościowo.
+**Algorytm Podstawowy** (<1-9 µs), ale z gorszą efektywnością. **Sortowanenie po wysokości** (5-47 µs) oferuje najlepszy kompromis - tylko 5x wolniejszy, ale znacznie lepszy jakościowo.
 
 ### 4. Jak rozmiar tafli wpływa na wyniki?
 To **kluczowe odkrycie** z Serii A:
@@ -348,7 +348,7 @@ Więcej klocków = lepsza możliwość dopasowania dzięki różnorodności rozm
 **TAK, ale tylko na bardzo ciasnej przestrzeni!**
 
 - Na minimalnej tafli (~194K px²) Best-Fit osiągnął **82,51%** (najlepszy!)
-- Na dużej tafli z 40 klockami jest drugi (82,53%), ale ~23x wolniejszy od Sort. wysokość
+- Na dużej tafli z 40 klockami jest drugi (82,53%), ale ~23x wolniejszy od Sortowanenia po wysokości
 - Strategia "znajdź najlepsze miejsce" opłaca się gdy każdy piksel ma znaczenie
 
 ### 7. Trade-off między czasem a jakością:
@@ -372,14 +372,14 @@ Więcej klocków = lepsza możliwość dopasowania dzięki różnorodności rozm
 
 **B) Liczba klocków (Seria B):**
 - Więcej klocków = wyższa efektywność (lepsze dopasowanie)
-- Sort. wysokość dominuje przy większej liczbie elementów
+- Sortowanenie po wysokości dominuje przy większej liczbie elementów
 
 ### 2. Brute Force - algorytm dla specjalistów
 - **Zalety:** Najwyższa efektywność na małej tafli (83-88%)
 - **Wady:** Niepraktyczny dla >10 elementów (złożoność O(n!))
 - **Rekomendacja:** Używać tylko dla ≤10 klocków gdy optymalizacja jest kluczowa
 
-### 3. Sort. wysokość - uniwersalny zwycięzca
+### 3. Sortowanenie po wysokości - uniwersalny zwycięzca
 - Konsekwentnie najlepszy przy dużej liczbie klocków (86,45% przy 40 klockach)
 - Szybki (~50 µs)
 - Stabilne, przewidywalne wyniki
@@ -403,7 +403,7 @@ Więcej klocków = lepsza możliwość dopasowania dzięki różnorodności rozm
 
 1. **Problem ma dwa wymiary:** Rozmiar tafli i liczba klocków decydują o wynikach
 
-2. **Prostota często wygrywa:** Sort. wysokość pokonuje bardziej złożony Best-Fit
+2. **Prostota często wygrywa:** Sortowanenie po wysokości pokonuje bardziej złożony Best-Fit
 
 3. **Strategia sortowania ma znaczenie:** Sortowanie po wysokości > po powierzchni > po szerokości
 

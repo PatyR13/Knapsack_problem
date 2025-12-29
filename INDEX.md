@@ -1,4 +1,4 @@
-# � Projekt: Układanie Klocków na Tafli
+# Projekt: Układanie Klocków na Tafli
 ## Algorytmy optymalizacji 2D bin packing
 
 Projekt realizowany w ramach studiów podyplomowych WWSI - przedmiot TAZW (Tworzenie aplikacji z wykorzystaniem IDE oraz wsparciem AI).
@@ -32,9 +32,9 @@ Projekt implementuje 6 algorytmów układania prostokątnych elementów:
 
 1. **Brute Force** - wszystkie permutacje (max 10 elementów)
 2. **Zachłanny z obracaniem** - testuje orientacje 0° i 90°
-3. **Sort. powierzchnia** - największe elementy pierwsze
-4. **Sort. wysokość** - najwyższe elementy pierwsze
-5. **Sort. szerokość** - najszersze elementy pierwsze
+3. **Sortowanenie po powierzchni** - największe elementy pierwsze
+4. **Sortowanenie po wysokości** - najwyższe elementy pierwsze
+5. **Sortowanenie po szerokości** - najszersze elementy pierwsze
 6. **Best-Fit** - inteligentne dopasowanie pozycji
 
 Szczegóły: [SPRAWOZDANIE.md](SPRAWOZDANIE.md)
